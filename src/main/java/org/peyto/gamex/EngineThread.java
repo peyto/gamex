@@ -93,4 +93,11 @@ public class EngineThread<TState extends GameState<TState>> implements Runnable 
         return gameEnvironment.getTurnValidator();
     }
 
+    public TState getState() {
+        return store.getState();
+    }
+
+    public GameEnvironment<TState> getGameEnvironment() {
+        return gameEnvironment;
+    }
 }
